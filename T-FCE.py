@@ -554,41 +554,6 @@ loss_func = CrossEntropyLoss()
 ## Train
 epochs = 150
 
-'''
-    Train the NN model and return the model at the final step.
-    Lists of the training and validation losses at each epochs are also 
-    returned.
-
-    Parameter:
-        epochs: int
-            Number of epochs to run.
-        model: Module
-            Your neural network model
-        loss_func: Loss
-            Loss function, e.g. CrossEntropyLoss()
-        opt: Optimizer
-            Optimizer, e.g. SGD()
-        train_dl: DataLoader
-            Dataloader of the training set.
-        valid_dl: DataLoader
-            Dataloader of the validation set.
-        one_cycle: OneCycle
-            See one_cycle.py. Object to calculate and update the learning 
-            rates and momentums at the end of each training iteration (not 
-            epoch) based on the one cycle policy.
-        train_metric: Bool
-            Default is False. If False, the train loss and accuracy will be
-            set to 0.
-            If True, the loss and accuracy of the train set will also be 
-            computed.
-
-    Return:
-        model: Module
-            Trained model.
-        metrics: DataFrame
-            DataFrame which contains the train and validation loss at each
-            epoch.
-'''
 print(
     'EPOCH', '\t',
     'Train Loss', '\t',
